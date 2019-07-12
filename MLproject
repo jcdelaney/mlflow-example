@@ -1,0 +1,10 @@
+name: custom_model
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      csv_path: path
+      outcome_name: string
+    command: "python train.py --csv-path {csv_path} --outcome-name {outcome_name}"
